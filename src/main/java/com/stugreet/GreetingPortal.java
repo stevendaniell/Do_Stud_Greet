@@ -20,13 +20,17 @@ public class GreetingPortal {
         } else {
             timeGreeting = "Good night";
         }
-        
+
         if (studentName == null || studentName.trim().isEmpty()) {
             return timeGreeting + ", Student!";
         }
         return timeGreeting + ", " + studentName.trim() + "!";
     }
-    
+
+    public String getPortalVersion() {
+        return "Student Greeting Portal v1.0";
+    }
+
     public static void main(String[] args) {
         GreetingPortal portal = new GreetingPortal();
         System.out.println(portal.greetStudent("John Doe"));
